@@ -1,22 +1,25 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import MonsterList from '../Components/MonsterLIst/MonsterList';
-import { getMonsters } from '../services/monsters';
+import CharacterList from '../Components/CharacterList/CharacterList';
+import { getCharacters } from '../services/characters';
+import Controls from '../Components/Controls/Controls';
 
 export default function Home() {
-  const [monsters, setMonsters] = useState([]);
+  const [characters, setCharacters] = useState([]);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getMonsters();
-      setMonsters(data);
+      const data = await getCharacters();
+      setCharacters(data);
     };
     fetchData();
   }, []);
 
   return (
     <div>
-      <MonsterList monsters={monsters} />
+      <Controls query={query} setQuery={setQuery} />
+      <CharacterList characters={characters} />
     </div>
   );
 }

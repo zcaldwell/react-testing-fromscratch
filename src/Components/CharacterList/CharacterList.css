@@ -1,0 +1,14 @@
+li {
+  list-style-type: none;
+}
+
+.characterList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.characterImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
