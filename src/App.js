@@ -4,7 +4,7 @@ import Home from './Views/Home';
 function App() {
   return (
     <div className="App">
-      <Home mo />
+      <Home />
     </div>
   );
 }
