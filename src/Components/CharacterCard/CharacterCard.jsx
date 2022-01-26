@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function CharacterCard({ character }) {
-  console.log(character);
   return (
     <div className="charaterCard">
       <h1>
