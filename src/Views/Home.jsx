@@ -24,12 +24,9 @@ export default function Home() {
 
   return (
     <div>
-      {loading && <span className="loader"></span>}
-      {!loading && (
-        <>
-          <CharacterList characters={characters} setLoading={setLoading} loading={loading} />
-        </>
-      )}
+      <>
+        <CharacterList characters={characters} setLoading={setLoading} loading={loading} />
+      </>
     </div>
   );
 }
