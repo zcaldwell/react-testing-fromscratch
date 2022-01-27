@@ -17,5 +17,5 @@ test('test for sort behavior', async () => {
 
   const sort = await screen.findByRole('combobox');
   userEvent.selectOptions(sort, 'asc');
-  expect(screen.getByRole('option', { name: 'asc' }).selected).toBe(true);
+  expect(screen.getByRole('option', { name: /asc/i }).selected).toBe(true);
 });

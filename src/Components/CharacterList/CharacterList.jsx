@@ -41,7 +41,7 @@ export default function CharacterList({ characters }) {
         <ul className="characterList">
           {filterCharacters().map((character) => {
             return (
-              <li className="list" key={character.name}>
+              <li className="list" key={character.id}>
                 <CharacterCard character={character} />
               </li>
             );
