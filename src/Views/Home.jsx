@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import CharacterList from '../Components/CharacterList/CharacterList';
 import { getCharacters } from '../services/characters';
+import './Home.css';
 
 export default function Home() {
   const [characters, setCharacters] = useState([]);

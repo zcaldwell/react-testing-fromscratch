@@ -39,7 +39,7 @@ export default function CharacterList({ characters }) {
 
   return (
     <>
-      <div>
+      <div className="input-container">
         <div className="search-input">
           <input
             placeholder="Search"
