@@ -1,6 +1,7 @@
 export async function getCharacters() {
   const resp = await fetch(`https://thronesapi.com/api/v2/characters`);
   const data = await resp.json();
+  console.log('DATA', data);
   let uniqueId = 0;
   data.forEach((char) => {
     char.id = uniqueId;
