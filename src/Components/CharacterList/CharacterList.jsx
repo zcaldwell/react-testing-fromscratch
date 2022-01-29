@@ -51,19 +51,25 @@ export default function CharacterList({ characters }) {
           />
         </div>
         <div>
-          <select value={order} onChange={(e) => setOrder(e.target.value)}>
-            <option value="n/a">N/A</option>
-            <option value="asc">Ascending</option>
-            <option value="dsc">Descending</option>
-          </select>
+          <label>
+            Order
+            <select value={order} onChange={(e) => setOrder(e.target.value)}>
+              <option value="n/a">N/A</option>
+              <option value="asc">Ascending</option>
+              <option value="dsc">Descending</option>
+            </select>
+          </label>
         </div>
         <div>
-          <select value={family} onChange={(e) => setFamily(e.target.value)}>
-            <option value="">All</option>
-            <option value="Stark">Stark</option>
-            <option value="Bolton">Bolton</option>
-            <option value="Free Folk">Free Folk</option>
-          </select>
+          <label>
+            House
+            <select value={family} onChange={(e) => setFamily(e.target.value)}>
+              <option value="">All</option>
+              <option value="Stark">Stark</option>
+              <option value="Bolton">Bolton</option>
+              <option value="Free Folk">Free Folk</option>
+            </select>
+          </label>
         </div>
       </div>
       <div>

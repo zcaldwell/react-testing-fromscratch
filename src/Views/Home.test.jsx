@@ -1,4 +1,4 @@
-import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Home from './Home';
 import { rest } from 'msw';
@@ -551,7 +551,6 @@ test('test character cards load onto the page', async () => {
 
   const loading = screen.getByText(/loading/i);
   expect(loading).toBeInTheDocument();
-  // await waitForElementToBeRemoved(() => screen.getByText(/loading/i));
 
   const characters = await screen.findAllByRole('listitem');
   expect(characters).toHaveLength(53);
@@ -560,7 +559,27 @@ test('test character cards load onto the page', async () => {
 test('test for sort behavior', async () => {
   render(<Home />);
 
-  const sort = await screen.findByRole('combobox');
+  const sort = await screen.findByLabelText('Order');
+
   userEvent.selectOptions(sort, 'asc');
+
   expect(screen.getByRole('option', { name: /asc/i }).selected).toBe(true);
+});
+
+test('test for house behavior', async () => {
+  render(<Home />);
+
+  const house = await screen.findByLabelText('House');
+
+  userEvent.selectOptions(house, 'Stark');
+
+  expect(screen.getByRole('option', { name: /stark/i }).selected).toBe(true);
+});
+
+test('Input should search for a character', async () => {
+  render(<Home />);
+
+  const searchbar = await screen.findByRole('textbox');
+  userEvent.type(searchbar, 'Jon Snow');
+  expect(searchbar).toHaveValue('Jon Snow');
 });

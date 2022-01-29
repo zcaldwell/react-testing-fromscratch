@@ -2,6 +2,7 @@
   text-align: center;
   background-color: var(--khaki-web);
   margin-bottom: 0px;
+  min-height: 100vh;
 }
 
 .App-logo {
