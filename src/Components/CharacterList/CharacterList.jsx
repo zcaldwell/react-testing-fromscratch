@@ -68,6 +68,10 @@ export default function CharacterList({ characters }) {
               <option value="Stark">Stark</option>
               <option value="Bolton">Bolton</option>
               <option value="Free Folk">Free Folk</option>
+              <option value="Targaryen">Targaryen</option>
+              <option value="Baratheon">Baratheon</option>
+              <option value="Lannister">Lannister</option>
+              <option value="Greyjoy">Greyjoy</option>
             </select>
           </label>
         </div>
