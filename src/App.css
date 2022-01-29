@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: var(--khaki-web);
+  margin-bottom: 0px;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +38,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+:root {
+  --rich-black: #0a0908ff;
+  --gunmetal: #22333bff;
+  --almond: #eae0d5ff;
+  --khaki-web: #c6ac8fff;
+  --umber: #5e503fff;
 }
